@@ -9,7 +9,7 @@ const Header = () => {
   const { setIsOpen, isOpen } = useContext(sideBarContext);
   const { itemAmout } = useContext(cartContext);
   const [isActive, setIsActive] = useState(false);
-  console.log(isActive);
+  
 
   // event listner
   useEffect(() => {
@@ -20,10 +20,10 @@ const Header = () => {
 
   return (
     <div
-      className={`${isActive ? `bg-white py-4 shadow-md ` : `bg-none  py-6`} 
+      className={`${isActive ? `bg-white py-4 shadow-md ` : `bg-none  py-6 `} 
   fixed w-full transition-all z-10 `}
     >
-      <div className="flex justify-between items-center container h-full mx-auto">
+      <div className="flex justify-between items-center container h-full mx-auto md:px-20">
         <Link to={"/"}>
           <img src={Logo} alt="headerCover" className="w-[40px]" />
         </Link>

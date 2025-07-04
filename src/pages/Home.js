@@ -3,7 +3,7 @@ import { productContext } from "../contexts/ProductContext.js";
 import Product from "../components/Product.js";
 import Hero from "../components/Hero.js";
 import { useState } from "react";
-
+import "./style.css"
 const Home = () => {
   const { products } = useContext(productContext);
 
@@ -35,12 +35,12 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <section className="py-20 ">
-        <div className="container mx-auto">
-          <div className="flex justify-center items-center mb-8">
+      <section className="p-8 md:p-20">
+        <div className="">
+          <div className="btnMenu flex overflow-x-auto   md:justify-center md:items-center mb-8"  >
             <div
               onClick={() => setFilter(AllProduct)}
-              className=" px-6 border py-1 cursor-pointer hover:text-red-800 transition-all"
+              className=" px-8 border py-1 cursor-pointer hover:text-red-800 transition-all"
             >
               All
             </div>
@@ -65,8 +65,8 @@ const Home = () => {
           </div>
 
           <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
-         xl:grid-cols-6 gap-[25px] max-auto md:max-none md:mx-0"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+         xl:grid-cols-4 gap-[25px] max-auto md:max-none md:mx-0"
           >
             {filter.map((product) => {
               return <Product product={product} key={product.id} />;

@@ -4,7 +4,7 @@ const Footer = () => {
   return <footer className='bg-primary py-4' >
     <div className='container mx-auto'>
       <p className='text-center text-white'>
-        Copyright &copy; Ecommerce shope 2024. All
+        Copyright &copy; Ecommerce shope 2025. All
         rigths reserved.
       </p>
     </div>
